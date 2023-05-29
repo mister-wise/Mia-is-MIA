@@ -330,6 +330,8 @@ MonoBehaviour:
   titleText: {fileID: 9043482757621350545}
   messageText: {fileID: 8801172179918944479}
   notificationIcon: {fileID: 2556926209502925908}
+  messageIcon: {fileID: 21300000, guid: 71261e896e6df444ab29492d4c5cb6bd, type: 3}
+  missedCallIcon: {fileID: 21300000, guid: 34a494a10067c7841b78c8cfbbae3c07, type: 3}
 --- !u!114 &8672705953119961538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,7 +375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7274169537327754939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5448418061860012578}
+        m_TargetAssemblyTypeName: Phone.NotificationController, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8393983782703877081
 GameObject:
   m_ObjectHideFlags: 0

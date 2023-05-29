@@ -1,15 +1,27 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Phone
 {
+    public enum NotificationType
+    {
+        Message,
+        MissedCall
+    }
+
     public class NotificationController : MonoBehaviour
     {
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private TMP_Text messageText;
         [SerializeField] private Image notificationIcon;
+
+        [SerializeField] private Sprite messageIcon;
+        [SerializeField] private Sprite missedCallIcon;
+
+        private Notification notification;
 
         private void Awake()
         {
@@ -18,12 +30,40 @@ namespace Phone
 
         public void SetNotification(Notification notification)
         {
+            this.notification = notification;
+            
             titleText.text = notification.Title;
             messageText.text = notification.Message;
-            if (notification.Icon)
+            notificationIcon.sprite = notification.Type switch
             {
-                notificationIcon.sprite = notification.Icon;
+                NotificationType.Message => messageIcon,
+                NotificationType.MissedCall => missedCallIcon,
+                _ => messageIcon
+            };
+        }
+
+        public void Remove()
+        {
+            var removeSequence = DOTween.Sequence();
+            removeSequence
+                .Append(transform.DOLocalMoveX(320, .2f))
+                .OnComplete(() => { Destroy(gameObject); });
+        }
+
+        public void HandleClick()
+        {
+            switch(notification.Type)
+            {
+                case NotificationType.Message:
+                    Debug.Log("Open Message");
+                    break;
+                case NotificationType.MissedCall:
+                    Debug.Log("Open Calls History");
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
+            Remove();
         }
     }
 }

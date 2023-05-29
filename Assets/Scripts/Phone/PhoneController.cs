@@ -1,3 +1,5 @@
+using System;
+using System.ComponentModel.Design.Serialization;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +9,8 @@ namespace Phone
     [RequireComponent(typeof(AudioSource))]
     public class PhoneController : MonoBehaviour
     {
+        public static PhoneController Instance;
+        
         private AudioSource audioSource;
         
         [SerializeField] private Transform notificationContainer;
@@ -14,18 +18,23 @@ namespace Phone
         [SerializeField] private AudioClip notificationSound;
 
         private int i = 1;
-        
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            AddNotification(new Notification("Anonymouse", $"Don't try it again!", null));
+            
         }
 
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                AddNotification(new Notification("Anonimowy", $"{i} Nie próbuj tego więcej", null));
+                AddNotification(new Notification(NotificationType.Message,"Anonimowy", $"{i} Nie próbuj tego więcej"));
                 i++;
             }
         }

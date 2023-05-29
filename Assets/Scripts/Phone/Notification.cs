@@ -5,15 +5,15 @@ namespace Phone
 
     public class Notification
     {
+        public NotificationType Type;
         public string Title;
         public string Message;
-        public Sprite Icon;
 
-        public Notification(string title, string message, Sprite icon)
+        public Notification(NotificationType type, string title, string message)
         {
+            Type = type;
             Title = title;
             Message = message;
-            Icon = icon;
         }
     }
 
