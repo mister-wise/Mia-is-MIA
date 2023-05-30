@@ -23,9 +23,15 @@ namespace Phone
 
         private Notification notification;
 
+
         private void Awake()
         {
             transform.localScale = Vector3.zero;
+        }
+
+        private void Start()
+        {
+            transform.DOScale(1, 1);
         }
 
         public void SetNotification(Notification notification)
@@ -58,7 +64,7 @@ namespace Phone
                     Debug.Log("Open Message");
                     break;
                 case NotificationType.MissedCall:
-                    Debug.Log("Open Calls History");
+                    PhoneController.Instance.OpenRecentCallsWindow();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
