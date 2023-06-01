@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35dd86bb194c544b905086f98029485, type: 3}
   m_Name: Anonymouse
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Anonymouse
   Image: {fileID: 0}

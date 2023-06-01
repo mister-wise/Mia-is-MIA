@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Phone.Notifications;
 using SODefinitions;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,10 @@ namespace Phone
         private AudioSource audioSource;
         
         [SerializeField] private TMP_Text clockText;
+        [SerializeField] private float closedWindowOffset = -750f;
+
+        [Header("Debug")]
+        [SerializeField] private ContactSO debugContact; 
 
         [Header("Notification")]
         [SerializeField] private Transform notificationContainer;
@@ -33,11 +38,16 @@ namespace Phone
         [SerializeField] private GameObject contactDetailsWindow;
         [SerializeField] private ContactDetails contactDetailsController;
 
-        private int i = 1;
+        [Header("Message List")]
+        public MessageList MessageList;
+        [SerializeField] private GameObject messageListWindow;
+        
 
         private void Awake()
         {
             Instance = this;
+
+            BackToHome();
         }
 
         void Start()
@@ -49,12 +59,15 @@ namespace Phone
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                AddNotification(new Notification(NotificationType.Message,"Anonimowy", $"{i} Nie próbuj tego więcej"));
-                i++;
+                ReceiveMessage(new Message(debugContact, "Nie próbuj tego więcej", false, DateTime.Now));
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                OpenMessageListWindow();
             }
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                AddNotification(new Notification(NotificationType.MissedCall,"Anonimowy", "Missed Call"));
+                AddMissingCall(debugContact);
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
@@ -71,6 +84,14 @@ namespace Phone
         // TODO: Change to real in game time
         private string GetGameTime() => DateTime.Now.ToString("HH:mm");
         
+        public void BackToHome()
+        {
+            CloseContactDetailsWindow();
+            CloseRecentCallsWindow();
+            CloseContactsListWindow();
+            CloseMessageListWindow();
+        }
+        
         public void Back()
         {
             if (Mathf.Round(contactDetailsWindow.transform.position.y) == 0)
@@ -81,27 +102,30 @@ namespace Phone
             {
                 CloseRecentCallsWindow();
                 CloseContactsListWindow();
+                CloseMessageListWindow();
             }
         }
 
         public void OpenRecentCallsWindow()
         {
+            BackToHome();
             recentCallsWindow.transform.DOMoveY(0, .5f);
         }
         
         public void CloseRecentCallsWindow()
         {
-            recentCallsWindow.transform.DOMoveY(-750, .5f);
+            recentCallsWindow.transform.DOMoveY(closedWindowOffset, .5f);
         }
         
         public void OpenContactsListWindow()
         {
+            BackToHome();
             contactsListWindow.transform.DOMoveY(0, .5f);
         }
         
         public void CloseContactsListWindow()
         {
-            contactsListWindow.transform.DOMoveY(-750, .5f);
+            contactsListWindow.transform.DOMoveY(closedWindowOffset, .5f);
         }
         
         public void OpenContactDetailsWindow(ContactSO contact)
@@ -112,7 +136,30 @@ namespace Phone
         
         public void CloseContactDetailsWindow()
         {
-            contactDetailsWindow.transform.DOMoveY(-750, .5f);
+            contactDetailsWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
+        
+        public void OpenMessageListWindow()
+        {
+            BackToHome();
+            messageListWindow.transform.DOMoveY(0, .5f);
+        }
+        
+        public void CloseMessageListWindow()
+        {
+            messageListWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
+
+        public void AddMissingCall(ContactSO contact, int count = 1)
+        {
+            AddNotification(new MissedCallNotification(contact, count));
+            AddCallToHistory(contact, RecentCallStatus.Missed, count);
+        }
+
+        public void ReceiveMessage(Message message)
+        {
+            MessageList.AddMessage(message);
+            AddNotification(new MessageNotification(message));
         }
 
 
@@ -121,17 +168,28 @@ namespace Phone
             var notificationObject = Instantiate(notificationPrefab, notificationContainer);
             notificationObject.GetComponent<NotificationController>()?.SetNotification(notification);
             audioSource.PlayOneShot(notificationSound);
-
-            if (notification.Type == NotificationType.MissedCall)
-            {
-                AddCallToHistory(notification.Title, RecentCallStatus.Missed);
-            }
         }
 
-        private void AddCallToHistory(string callerName, RecentCallStatus status)
+        private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count)
         {
+            var childCount = recentCallsContainer.transform.childCount;
+            if (childCount > 0)
+            {
+                var lastItemIndex = recentCallsContainer.transform.childCount - 1;
+                var lastItem =  recentCallsContainer.transform.GetChild(lastItemIndex).gameObject;
+                if (lastItem)
+                {
+                    var recentCall = lastItem.GetComponent<RecentCallItem>();
+                    if (recentCall.Contact == contact)
+                    {
+                        recentCall.IncreaseCounter();
+                        return;
+                    }
+                }
+            }
+            
             var recentCallItem = Instantiate(recentCallsPrefab, recentCallsContainer);
-            recentCallItem.GetComponent<RecentCallItem>()?.SetItem(callerName, status);
+            recentCallItem.GetComponent<RecentCallItem>()?.SetItem(contact, status, count);
         }
         
         

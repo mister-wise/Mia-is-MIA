@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Phone;
+using Phone.Notifications;
+using SODefinitions;
 using UnityEngine;
 
 public class Intro : MonoBehaviour
 {
-
+    [SerializeField] private ContactSO miaContact;
     void Start()
     {
         StartCoroutine(PlayIntro());
@@ -14,6 +16,6 @@ public class Intro : MonoBehaviour
     IEnumerator PlayIntro()
     {
         yield return new WaitForSeconds(3);
-        PhoneController.Instance.AddNotification(new Notification(NotificationType.MissedCall, "Sister", $"Missed call (3)"));
+        PhoneController.Instance.AddMissingCall(miaContact, 3);
     }
 }

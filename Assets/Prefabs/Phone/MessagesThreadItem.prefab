@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8391101721281533793}
   - component: {fileID: 8620070521892332720}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 227966038096340601}
   - component: {fileID: 693106283596270207}
   m_Layer: 0
-  m_Name: Title
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,9 +297,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7872398705356526986}
   - component: {fileID: 7364408858677490621}
-  - component: {fileID: 121248938480992359}
+  - component: {fileID: 307091149570469766}
   m_Layer: 0
-  m_Name: RecentsCallItem
+  m_Name: MessagesThreadItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &121248938480992359
+--- !u!114 &307091149570469766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,10 +357,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8716349454387663985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5700d03a22902aa488d8daac499ff2bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e4d411f51b531d64fabaf08c1ec69411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleText: {fileID: 693106283596270207}
-  Icon: {fileID: 8620070521892332720}
-  messageIcon: {fileID: 21300000, guid: 71261e896e6df444ab29492d4c5cb6bd, type: 3}
-  missedCallIcon: {fileID: 21300000, guid: 34a494a10067c7841b78c8cfbbae3c07, type: 3}
+  nameText: {fileID: 693106283596270207}
+  profileImage: {fileID: 8620070521892332720}
