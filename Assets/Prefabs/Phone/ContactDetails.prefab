@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 4051176084983397362}
   profileImage: {fileID: 4051176084395001011}
+  messageButton: {fileID: 5488087058947521802}
+  callButton: {fileID: 4524047103102901095}
 --- !u!1 &4051176083786374786
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +109,7 @@ GameObject:
   - component: {fileID: 4051176083786374846}
   - component: {fileID: 4051176083786374847}
   - component: {fileID: 4051176083786374784}
+  - component: {fileID: 5488087058947521802}
   m_Layer: 0
   m_Name: MessageButton
   m_TagString: Untagged
@@ -217,6 +220,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5488087058947521802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051176083786374786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bb8d4d7573fe5478b976f692e90aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4051176084335973302
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +725,7 @@ GameObject:
   - component: {fileID: 4051176085015970908}
   - component: {fileID: 4051176085015970909}
   - component: {fileID: 4051176085015970910}
+  - component: {fileID: 4524047103102901095}
   m_Layer: 0
   m_Name: CallButton
   m_TagString: Untagged
@@ -820,3 +836,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4524047103102901095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051176085015970848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662f9923240348049b5912cfacd2bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

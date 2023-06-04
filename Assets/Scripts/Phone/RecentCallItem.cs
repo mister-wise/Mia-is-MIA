@@ -18,6 +18,7 @@ namespace Phone
     public class RecentCallItem : MonoBehaviour, IPointerClickHandler
     {
         private ContactSO contact;
+        private RecentCallStatus status;
         private int count;
         
         [SerializeField] private TMP_Text titleText;
@@ -28,11 +29,13 @@ namespace Phone
         [SerializeField] private Color missingCallColor;
 
         public ContactSO Contact => contact;
+        public RecentCallStatus Status => status;
 
         public void SetItem(ContactSO contact, RecentCallStatus status, int count = 1)
         {
             this.contact = contact;
             this.count = count;
+            this.status = status;
             titleText.text = count > 1 ? $"{contact.Name} ({count})" : contact.Name;
             if (status == RecentCallStatus.Missed)
             {

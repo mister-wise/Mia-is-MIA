@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using Phone.Notifications;
 using SODefinitions;
@@ -20,6 +21,8 @@ namespace Phone
         [Header("General")]
         public bool CommunicationBlocked = false;
         [SerializeField] private AudioClip errorSound;
+        [SerializeField] private ContactSO miaContact;
+        [SerializeField] private ContactSO antagonistContact;
 
         [Header("Debug")]
         [SerializeField] private ContactSO debugContact; 
@@ -50,6 +53,15 @@ namespace Phone
         public MessageThread MessageThread;
         [SerializeField] private GameObject messageThreadWindow;
 
+        [Header("Call")]
+        public CallController Call;
+        [SerializeField] private AudioSource callAudioSource;
+        [SerializeField] private GameObject callWindow;
+        
+        [Header("Call KeyPad")]
+        public CallKeyPad CallKeyPad;
+        [SerializeField] private GameObject callKeyPadWindow;
+        
         private void Awake()
         {
             Instance = this;
@@ -64,22 +76,15 @@ namespace Phone
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.F1))
             {
                 ReceiveMessage(new Message(debugContact, "Nie próbuj tego więcej", false, DateTime.Now));
             }
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                OpenMessageListWindow();
-            }
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.F2))
             {
                 AddMissingCall(debugContact);
             }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                OpenContactsListWindow();
-            }
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Back();
@@ -98,11 +103,17 @@ namespace Phone
             CloseContactsListWindow();
             CloseMessageListWindow();
             CloseMessageTheadWindow();
+            CloseCallWindow();
+            CloseCallKeyPadWindow();
         }
         
         public void Back()
         {
-            if (IsWindowOpen(contactDetailsWindow))
+            if (IsWindowOpen(callWindow))
+            {
+                CloseCallWindow();
+            }
+            else if (IsWindowOpen(contactDetailsWindow))
             {
                 CloseContactDetailsWindow();
             }
@@ -115,6 +126,15 @@ namespace Phone
                 CloseRecentCallsWindow();
                 CloseContactsListWindow();
                 CloseMessageListWindow();
+                CloseCallKeyPadWindow();
+            }
+        }
+        
+        public void CloseOtherApplication(GameObject expectedWindow)
+        {
+            if (expectedWindow == contactDetailsWindow)
+            {
+                
             }
         }
 
@@ -166,6 +186,7 @@ namespace Phone
         
         public void OpenMessageTheadWindow(ContactSO contact)
         {
+            BackToHome();
             MessageThread.Rebuild(contact, MessageList.GetContactMessages(contact));
             messageThreadWindow.transform.DOMoveY(0, .5f);
         }
@@ -173,6 +194,28 @@ namespace Phone
         public void CloseMessageTheadWindow()
         {
             messageThreadWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
+        
+        public void OpenCallWindow(ContactSO contact)
+        {
+            Call.StartCall(contact);
+            callWindow.transform.DOMoveY(0, .5f);
+        }
+        
+        public void CloseCallWindow()
+        {
+            StopCallSound();
+            callWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
+        
+        public void OpenCallKeyPadWindow()
+        {
+            callKeyPadWindow.transform.DOMoveY(0, .5f);
+        }
+        
+        public void CloseCallKeyPadWindow()
+        {
+            callKeyPadWindow.transform.DOMoveY(closedWindowOffset, .5f);
         }
 
         public void AddMissingCall(ContactSO contact, int count = 1)
@@ -200,7 +243,7 @@ namespace Phone
             return Mathf.Round(window.transform.position.y) == 0;
         }
 
-        private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count)
+        private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count=1)
         {
             var childCount = recentCallsContainer.transform.childCount;
             if (childCount > 0)
@@ -210,7 +253,7 @@ namespace Phone
                 if (lastItem)
                 {
                     var recentCall = lastItem.GetComponent<RecentCallItem>();
-                    if (recentCall.Contact == contact)
+                    if (recentCall.Contact == contact && recentCall.Status == status)
                     {
                         recentCall.IncreaseCounter();
                         return;
@@ -221,11 +264,77 @@ namespace Phone
             var recentCallItem = Instantiate(recentCallsPrefab, recentCallsContainer);
             recentCallItem.GetComponent<RecentCallItem>()?.SetItem(contact, status, count);
         }
+        
+        public void StartCall(ContactSO contact)
+        {
+            StartCoroutine(HandleCall(contact));
+        }
 
+        public IEnumerator HandleCall(ContactSO contact)
+        {
+            AddCallToHistory(contact, RecentCallStatus.Outgoing);
+            OpenCallWindow(contact);
+            
+            if (!CommunicationBlocked)
+            {
+                PlayCallSound();
+                yield return new WaitForSeconds(5f);
+            }
+
+            yield return new WaitForSeconds(1.5f);
+            if (contact != antagonistContact && contact != miaContact)
+            {
+                Call.FailedCall();
+                yield return new WaitForSeconds(3f);
+                CloseCallWindow();
+                if (CommunicationBlocked) yield break;
+                
+                yield return new WaitForSeconds(2f);
+                Instance.SendWarning(contact);
+            }
+        }
+
+        public IEnumerator HandleSendMessage(Message message)
+        {
+            var messageItem = MessageList.AddMessage(message);
+            yield return new WaitForSeconds(1.5f);
+            if (message.Contact == antagonistContact || message.Contact == miaContact)
+            {
+                
+            }
+            else
+            {
+                messageItem.SetNotDeliveredStatus();
+                MessageThread.ScrollToBottom();
+                Instance.SendWarning(message.Contact);
+            }
+        }
+
+        public void SendWarning(ContactSO contact)
+        {
+            CommunicationBlocked = true;
+            var messageText = "This is just between us, don't involve others.";
+            if (contact.Name is "911" or "112")
+            {
+                messageText = "Don't try it. This is the only warning.";
+            }
+           
+            ReceiveMessage(new Message(antagonistContact, messageText, false, DateTime.Now));
+        }
 
         public void PlayErrorSound()
         {
             audioSource.PlayOneShot(errorSound);
+        }
+        
+        public void PlayCallSound()
+        {
+            callAudioSource.Play();
+        }
+        
+        public void StopCallSound()
+        {
+            callAudioSource.Stop();
         }
     }
 }

@@ -77,18 +77,7 @@ namespace Phone
                 Owner = true
             };
             messageInput.text = "";
-            StartCoroutine(SendMessage(message));
-        }
-
-        private IEnumerator SendMessage(Message message)
-        {
-            var messageItem = PhoneController.Instance.MessageList.AddMessage(message);
-            yield return new WaitForSeconds(1.5f);
-            if (PhoneController.Instance.CommunicationBlocked)
-            {
-                messageItem.SetNotDeliveredStatus();
-                ScrollToBottom();
-            }
+            StartCoroutine(PhoneController.Instance.HandleSendMessage(message));
         }
     }
 }

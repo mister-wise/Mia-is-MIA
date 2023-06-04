@@ -1,3 +1,4 @@
+using SODefinitions;
 using UnityEngine;
 
 namespace Phone
@@ -8,12 +9,14 @@ namespace Phone
         public NotificationType Type;
         public string Title;
         public string Message;
-
-        public Notification(NotificationType type, string title, string message)
+        public ContactSO Contact;
+        
+        public Notification(NotificationType type, string message, ContactSO contact)
         {
             Type = type;
-            Title = title;
+            Title = contact.Name;
             Message = message;
+            Contact = contact;
         }
     }
 

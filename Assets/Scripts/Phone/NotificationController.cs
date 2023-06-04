@@ -1,7 +1,9 @@
 using System;
 using DG.Tweening;
+using Phone.Notifications;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Phone
@@ -12,7 +14,7 @@ namespace Phone
         MissedCall
     }
 
-    public class NotificationController : MonoBehaviour
+    public class NotificationController : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IDragHandler, IEndDragHandler
     {
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private TMP_Text messageText;
@@ -22,11 +24,14 @@ namespace Phone
         [SerializeField] private Sprite missedCallIcon;
 
         private Notification notification;
+        private Vector3 initPosition;
+        private RectTransform rectTransform;
 
 
         private void Awake()
         {
             transform.localScale = Vector3.zero;
+            rectTransform = GetComponent<RectTransform>();
         }
 
         private void Start()
@@ -56,12 +61,40 @@ namespace Phone
                 .OnComplete(() => { Destroy(gameObject); });
         }
 
-        public void HandleClick()
+        public void OnDrag(PointerEventData eventData)
         {
+            rectTransform.anchoredPosition += new Vector2(eventData.delta.x, 0);
+            if (rectTransform.anchoredPosition.x < 0)
+            {
+                rectTransform.anchoredPosition = Vector2.zero;
+            }
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            if (rectTransform.anchoredPosition.x >= 100f)
+            {
+                Remove();
+            }
+            else
+            {
+                transform.position = initPosition;
+            }
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            initPosition = transform.position;
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (rectTransform.anchoredPosition.x != 0) return;
+
             switch(notification.Type)
             {
                 case NotificationType.Message:
-                    Debug.Log("Open Message");
+                    PhoneController.Instance.OpenMessageTheadWindow(notification.Contact);
                     break;
                 case NotificationType.MissedCall:
                     PhoneController.Instance.OpenRecentCallsWindow();
@@ -70,7 +103,6 @@ namespace Phone
                     throw new ArgumentOutOfRangeException();
             }
             Remove();
-           
         }
     }
 }

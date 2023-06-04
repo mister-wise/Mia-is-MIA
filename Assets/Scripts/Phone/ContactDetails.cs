@@ -12,12 +12,16 @@ namespace Phone
         
         [SerializeField] private TMP_Text nameText;
         [SerializeField] private Image profileImage;
+        [SerializeField] private MessageButton messageButton;
+        [SerializeField] private CallButton callButton;
 
         public void SetContactData(ContactSO contact)
         {
             this.contact = contact;
             nameText.text = contact.Name;
             profileImage.sprite = contact.Image;
+            messageButton.Contact = contact;
+            callButton.Contact = contact;
         }
     }
 }
