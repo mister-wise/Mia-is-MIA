@@ -70,6 +70,7 @@ namespace Phone
                     throw new ArgumentOutOfRangeException();
             }
             Remove();
+           
         }
     }
 }

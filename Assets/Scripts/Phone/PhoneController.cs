@@ -16,6 +16,10 @@ namespace Phone
         
         [SerializeField] private TMP_Text clockText;
         [SerializeField] private float closedWindowOffset = -750f;
+        
+        [Header("General")]
+        public bool CommunicationBlocked = false;
+        [SerializeField] private AudioClip errorSound;
 
         [Header("Debug")]
         [SerializeField] private ContactSO debugContact; 
@@ -42,6 +46,9 @@ namespace Phone
         public MessageList MessageList;
         [SerializeField] private GameObject messageListWindow;
         
+        [Header("Message Thread")]
+        public MessageThread MessageThread;
+        [SerializeField] private GameObject messageThreadWindow;
 
         private void Awake()
         {
@@ -90,13 +97,18 @@ namespace Phone
             CloseRecentCallsWindow();
             CloseContactsListWindow();
             CloseMessageListWindow();
+            CloseMessageTheadWindow();
         }
         
         public void Back()
         {
-            if (Mathf.Round(contactDetailsWindow.transform.position.y) == 0)
+            if (IsWindowOpen(contactDetailsWindow))
             {
                 CloseContactDetailsWindow();
+            }
+            else if (IsMessageTheadOpen())
+            {
+                CloseMessageTheadWindow();
             }
             else
             {
@@ -105,6 +117,8 @@ namespace Phone
                 CloseMessageListWindow();
             }
         }
+
+        public bool IsMessageTheadOpen() => IsWindowOpen(messageThreadWindow);
 
         public void OpenRecentCallsWindow()
         {
@@ -149,6 +163,17 @@ namespace Phone
         {
             messageListWindow.transform.DOMoveY(closedWindowOffset, .5f);
         }
+        
+        public void OpenMessageTheadWindow(ContactSO contact)
+        {
+            MessageThread.Rebuild(contact, MessageList.GetContactMessages(contact));
+            messageThreadWindow.transform.DOMoveY(0, .5f);
+        }
+        
+        public void CloseMessageTheadWindow()
+        {
+            messageThreadWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
 
         public void AddMissingCall(ContactSO contact, int count = 1)
         {
@@ -168,6 +193,11 @@ namespace Phone
             var notificationObject = Instantiate(notificationPrefab, notificationContainer);
             notificationObject.GetComponent<NotificationController>()?.SetNotification(notification);
             audioSource.PlayOneShot(notificationSound);
+        }
+
+        private bool IsWindowOpen(GameObject window)
+        {
+            return Mathf.Round(window.transform.position.y) == 0;
         }
 
         private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count)
@@ -191,7 +221,11 @@ namespace Phone
             var recentCallItem = Instantiate(recentCallsPrefab, recentCallsContainer);
             recentCallItem.GetComponent<RecentCallItem>()?.SetItem(contact, status, count);
         }
-        
-        
+
+
+        public void PlayErrorSound()
+        {
+            audioSource.PlayOneShot(errorSound);
+        }
     }
 }

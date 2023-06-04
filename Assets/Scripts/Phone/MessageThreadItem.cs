@@ -26,7 +26,7 @@ namespace Phone
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            PhoneController.Instance.OpenContactDetailsWindow(contact);
+            PhoneController.Instance.OpenMessageTheadWindow(contact);
         }
     }
 }
