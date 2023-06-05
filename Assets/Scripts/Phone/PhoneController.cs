@@ -61,6 +61,11 @@ namespace Phone
         [Header("Call KeyPad")]
         public CallKeyPad CallKeyPad;
         [SerializeField] private GameObject callKeyPadWindow;
+
+        [Header("Gallery")]
+        public GalleryApplication GalleryApplication;
+        [SerializeField] private GameObject galleryApplicationWindow;
+
         
         private void Awake()
         {
@@ -105,10 +110,15 @@ namespace Phone
             CloseMessageTheadWindow();
             CloseCallWindow();
             CloseCallKeyPadWindow();
+            CloseGalleryApplication();
         }
         
         public void Back()
         {
+            if (IsWindowOpen(galleryApplicationWindow) && !GalleryApplication.Back())
+            {
+                CloseGalleryApplication();
+            }
             if (IsWindowOpen(callWindow))
             {
                 CloseCallWindow();
@@ -127,14 +137,6 @@ namespace Phone
                 CloseContactsListWindow();
                 CloseMessageListWindow();
                 CloseCallKeyPadWindow();
-            }
-        }
-        
-        public void CloseOtherApplication(GameObject expectedWindow)
-        {
-            if (expectedWindow == contactDetailsWindow)
-            {
-                
             }
         }
 
@@ -216,6 +218,16 @@ namespace Phone
         public void CloseCallKeyPadWindow()
         {
             callKeyPadWindow.transform.DOMoveY(closedWindowOffset, .5f);
+        }
+        
+        public void OpenGalleryApplication()
+        {
+            galleryApplicationWindow.transform.DOMoveY(0, .5f);
+        }
+        
+        public void CloseGalleryApplication()
+        {
+            galleryApplicationWindow.transform.DOMoveY(closedWindowOffset, .5f);
         }
 
         public void AddMissingCall(ContactSO contact, int count = 1)

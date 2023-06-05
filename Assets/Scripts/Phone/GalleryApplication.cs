@@ -1,18 +1,43 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using SODefinitions;
 using UnityEngine;
 
-public class GalleryApplication : MonoBehaviour
+namespace Phone
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GalleryApplication : MonoBehaviour
     {
+        [SerializeField] private List<GalleryImageSO> images;
+        [SerializeField] private GalleryImageZoom galleryZoomImage;
+        [SerializeField] private GameObject imagePrefab;
+        [SerializeField] private Transform listContainer;
         
-    }
+        
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Awake()
+        {
+            galleryZoomImage.Disable();
+        }
+
+        private void Start()
+        {
+            foreach (var image in images)
+            {
+                Instantiate(imagePrefab, listContainer).GetComponent<GalleryImage>()?.SetImage(image);
+            }
+        }
+
+        public bool Back()
+        {
+            if (!galleryZoomImage.gameObject.activeSelf) return false;
+            galleryZoomImage.Disable();
+            return true;
+        }
+
+        public void ZoomPhoto(GalleryImageSO galleryImage)
+        {
+            galleryZoomImage.gameObject.SetActive(true);
+            galleryZoomImage.SetItem(galleryImage);
+        }
     }
 }
