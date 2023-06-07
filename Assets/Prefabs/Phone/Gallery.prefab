@@ -114,13 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24106334e827c54d8f40b6c818a8a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
-  - {fileID: 11400000, guid: 011f3ad89411d0f46810b2e9a1335cd8, type: 2}
+  images: []
   galleryZoomImage: {fileID: 1900542574035525666}
   imagePrefab: {fileID: 1990487538176487889, guid: b9a35f66a5359df438be322381a9acc4, type: 3}
   listContainer: {fileID: 1900542573074081605}

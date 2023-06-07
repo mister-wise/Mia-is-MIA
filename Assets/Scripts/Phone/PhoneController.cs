@@ -16,7 +16,7 @@ namespace Phone
         private AudioSource audioSource;
         
         [SerializeField] private TMP_Text clockText;
-        [SerializeField] private float closedWindowOffset = -750f;
+        [SerializeField] private float closedWindowOffset = -1000f;
         
         [Header("General")]
         public bool CommunicationBlocked = false;

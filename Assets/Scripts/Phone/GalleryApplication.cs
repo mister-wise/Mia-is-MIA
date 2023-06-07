@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using SODefinitions;
 using UnityEngine;
@@ -38,6 +37,11 @@ namespace Phone
         {
             galleryZoomImage.gameObject.SetActive(true);
             galleryZoomImage.SetItem(galleryImage);
+
+            if (galleryImage.Unlock)
+            {
+                Notebook.Instance.Unlock(galleryImage.Unlock);
+            }
         }
     }
 }

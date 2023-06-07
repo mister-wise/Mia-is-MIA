@@ -21,6 +21,7 @@ namespace Phone
         
         public void StartCall()
         {
+            if (phoneInput.text.Trim().Length < 3) return;
             var customContact = ScriptableObject.CreateInstance<ContactSO>();
             customContact.Name = phoneInput.text;
             PhoneController.Instance.StartCall(customContact);

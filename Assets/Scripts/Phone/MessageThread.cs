@@ -36,7 +36,7 @@ namespace Phone
                 Destroy(child.gameObject);
             }
 
-            foreach (var message in messages.OrderBy(message => message.Time))
+            foreach (var message in messages.OrderBy(message => message.GetDateTime()))
             {
                 if (message.Owner)
                 {

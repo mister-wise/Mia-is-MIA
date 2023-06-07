@@ -26,14 +26,18 @@ namespace Phone
             }
 
             var uniqueNames = messages
-                .OrderBy(message => message.Read).ThenByDescending(message => message.Time)
+                .OrderBy(message => message.Read).ThenByDescending(message => message.GetDateTime())
                 .Select(m => m.Contact)
                 .Distinct(new MessageEqualityComparer());
 
             foreach (var contact in uniqueNames)
             {
+                // Debug.Log(messages.Where(message => message.Contact == contact)
+                //     .OrderByDescending(message => message.Time).ToArray());
+                var lastMessage = messages.Where(message => message.Contact == contact)
+                    .OrderByDescending(message => message.GetDateTime()).First();
                 Instantiate(messagesPrefab, messagesListContainer).GetComponent<MessageThreadItem>()
-                    ?.SetItem(contact, IsThreadUnread(contact));
+                    ?.SetItem(lastMessage, IsThreadUnread(contact));
             }
         }
         
