@@ -10,9 +10,10 @@ namespace Phone
         public ContactSO Contact;
         public string Text;
         public bool Read = false;
-        public DateTime Time;
         public bool Owner = false;
         public bool Failed = false;
+
+        private DateTime time;
 
         [SerializeField] private string stringTime;
         
@@ -22,7 +23,7 @@ namespace Phone
             Contact = contact;
             Text = text;
             Read = read;
-            Time = time;
+            this.time = time;
             stringTime = time.ToShortTimeString();
 
         }
@@ -32,7 +33,7 @@ namespace Phone
             Contact = contact;
             Text = text;
             Read = read;
-            Time = DateTime.Parse(stringTime);
+            time = DateTime.Parse(stringTime);
             this.stringTime = stringTime;
         }
 
@@ -51,6 +52,12 @@ namespace Phone
         public string GetDateTimeToString(string pattern = "ddd, dd MMMM yyyy, HH:mm")
         {
             return GetDateTime().ToString(pattern);
+        }
+
+        public string GetShortText(int limit = 100)
+        {
+            var flatText = Text.Replace("<br>", " ");
+            return flatText.Length > limit ? $"{flatText.Substring(0, limit - 3)}..." : flatText;
         }
     }
 }

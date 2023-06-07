@@ -3371,6 +3371,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893963350}
   m_CullTransparentMesh: 1
+--- !u!224 &1907568464 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+  m_PrefabInstance: {fileID: 3232882628032265477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994037438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,6 +3623,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2079436349}
+  - {fileID: 1907568464}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3657,7 +3663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 1237362641}
-  closedWindowOffset: -750
+  closedWindowOffset: -1000
   CommunicationBlocked: 0
   errorSound: {fileID: 8300000, guid: 02d269cfd2feb8c40b1fe5eb3e761140, type: 3}
   miaContact: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
@@ -3693,8 +3699,8 @@ RectTransform:
   m_GameObject: {fileID: 2079436345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1882895209}
   - {fileID: 1268632123}
@@ -3703,8 +3709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -600, y: 0}
+  m_SizeDelta: {x: 1199.9999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
 AudioSource:
@@ -3955,8 +3961,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.size
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
+      propertyPath: images.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 47b21a3417eacc943bb19da1abacb337, type: 2}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[6]
       value: 
@@ -4448,6 +4458,135 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfcfe1ed3c78244d858335077d24641, type: 3}
+--- !u!1001 &3232882628032265477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2061600491}
+    m_Modifications:
+    - target: {fileID: 1733543675763261326, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853034170205999718, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853034170205999718, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853034170205999718, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853034170205999718, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853034170205999718, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000015258578
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874762, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_Name
+      value: Notebook
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1173.9692
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882629433779923, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0005187988
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564863046855034279, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
 --- !u!1001 &3443760812465372199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4564,6 +4703,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1882895209}
     m_Modifications:
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: c88d4a5c09327214eade7d635c5997fe, type: 2}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[0].contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
     - target: {fileID: 4051176083269554935, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4755,7 +4906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.size
-      value: 4
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].Read
@@ -4763,15 +4914,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].Text
-      value: "Cze\u015B\u0107!<br>Spotkanie aktualne?"
+      value: Hey big bro! Ready for movie night?
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[1].Read
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[1].Text
-      value: '#1'
+      value: sure thing sis
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[2].Read
@@ -4779,7 +4930,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[2].Text
-      value: '#2'
+      value: tho I'd grab some chow before. I'm stuck at the office all day, I'll
+        be starving. U up?
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[3].Read
@@ -4787,10 +4939,406 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[3].Text
-      value: "Cze\u015B\u0107!\\nOczywiscie!\\nAktualne!"
+      value: Yup! Got any place in mind?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[4].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[4].Text
+      value: Not really. You?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[5].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[5].Text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[6].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[6].Text
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[7].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[7].Text
+      value: You know what I am gonna say!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[8].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[8].Text
+      value: '*sigh* seriously?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[9].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[9].Text
+      value: 'yes. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[10].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[10].Text
+      value: Mama's pizzeria? AGAIN?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[11].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[11].Text
+      value: 'YES. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[12].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[12].Text
+      value: come ooon! You know how I love this place!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[13].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[13].Text
+      value: Okay, okay. See you when?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[14].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[14].Text
+      value: 5:15?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[15].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[15].Text
+      value: Fine by me, I'll find some time for a break
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[16].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[16].Text
+      value: See you there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[17].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[17].Text
+      value: See ya! Can't wait!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[18].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[18].Text
+      value: u there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[19].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[19].Text
+      value: please pick up
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[1].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[20].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[20].Text
+      value: Ethan, PLEASE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[21].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[21].Text
+      value: IT'S URGENT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[22].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[22].Text
+      value: woah, what happened? u ok?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[23].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[23].Text
+      value: WHY R U NOT PICKING UP
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[24].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[24].Text
+      value: I'm sorry, didn't have a phone with me
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[25].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[25].Text
+      value: something happened?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[26].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[26].Text
+      value: idk, I think some creep is following me
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[27].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[27].Text
+      value: WHAT? call 911! Now!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[28].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[28].Text
+      value: I tried but they wltd- 1 ..
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[29].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[29].Text
+      value: What?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[2].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[30].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[30].Text
+      value: ??
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[31].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[31].Text
+      value: Are you there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[32].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[32].Text
+      value: Mia! Pick up the damn phone!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[33].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[33].Text
+      value: Sorry! I stumbled, had to collect all my stuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[34].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[34].Text
+      value: Are you okay? What about that creep?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[35].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[35].Text
+      value: False alarm, just some random weirdo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[36].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[37].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[38].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[39].Read
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[3].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[40].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[41].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[42].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[43].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[44].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[45].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[4].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[5].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[6].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[8].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[10].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[11].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[12].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[13].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[14].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[15].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[16].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[22].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[24].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[25].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[27].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[28].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[29].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[30].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[31].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[32].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[33].Owner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[34].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[35].Owner
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
@@ -4800,15 +5348,199 @@ PrefabInstance:
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[1].Contact
       value: 
-      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[2].Contact
       value: 
-      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[3].Contact
       value: 
       objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[4].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[5].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[6].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[7].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[8].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[9].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[10].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[11].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[12].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[13].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[14].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[15].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[16].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[17].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[18].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[19].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[20].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[21].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[22].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[23].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[24].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[25].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[26].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[27].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[28].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[29].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[30].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[31].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[32].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[33].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[34].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[35].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[36].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[37].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[38].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[39].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[40].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[41].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[42].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[43].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[44].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[45].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[0].stringTime
+      value: 06/07/2023 13:41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[1].stringTime
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[2].stringTime
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[3].stringTime
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
 --- !u!114 &7076698353172079467 stripped

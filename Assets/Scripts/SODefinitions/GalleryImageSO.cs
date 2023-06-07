@@ -9,5 +9,7 @@ namespace SODefinitions
         public Sprite Image;
         public string Geolocation = "n/a";
         public string Date = "n/a";
+
+        public NotebookItemSO Unlock;
     }
 }

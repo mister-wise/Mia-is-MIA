@@ -22,7 +22,6 @@ namespace Phone
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log($"Open contact: {contact.Name}");
             PhoneController.Instance.OpenContactDetailsWindow(contact);
         }
     }
