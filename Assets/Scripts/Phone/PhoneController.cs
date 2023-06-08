@@ -60,12 +60,13 @@ namespace Phone
         
         [Header("Call KeyPad")]
         public CallKeyPad CallKeyPad;
-        [SerializeField] private GameObject callKeyPadWindow;
+        [SerializeField]private GameObject callKeyPadWindow;
 
         [Header("Gallery")]
         public GalleryApplication GalleryApplication;
+        
         [SerializeField] private GameObject galleryApplicationWindow;
-
+        
         
         private void Awake()
         {
@@ -294,7 +295,7 @@ namespace Phone
             }
 
             yield return new WaitForSeconds(1.5f);
-            if (contact != antagonistContact && contact != miaContact)
+            if (contact != antagonistContact && contact != miaContact && IsWindowOpen(callWindow))
             {
                 Call.FailedCall();
                 yield return new WaitForSeconds(3f);

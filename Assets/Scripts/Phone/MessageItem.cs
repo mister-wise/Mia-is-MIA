@@ -45,7 +45,6 @@ namespace Phone
 
         public void OpenAttachment()
         {
-            Debug.Log($"Open: {message.AttachmentUrl}");
             Application.OpenURL(message.AttachmentUrl);
         }
     }
