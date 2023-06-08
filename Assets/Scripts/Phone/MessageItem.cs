@@ -13,12 +13,20 @@ namespace Phone
         [SerializeField] private TMP_Text datetimeText;
         [SerializeField] private GameObject notDeliveredObject;
         
+        [SerializeField] private GameObject attachment;
+        
         public void SetItem(Message message)
         {
             this.message = message;
             messageText.text = message.Text;
             datetimeText.text = message.GetDateTimeToString();
             notDeliveredObject.SetActive(message.Failed);
+
+            if (message.AttachmentName != "" && message.AttachmentUrl != "")
+            {
+                attachment.GetComponent<TMP_Text>().text = message.AttachmentName;
+                attachment.SetActive(true);
+            }
         }
 
         public void PlayPopUpAnimation()
@@ -33,6 +41,12 @@ namespace Phone
             notDeliveredObject.SetActive(true);
             message.Failed = true;
             PhoneController.Instance.PlayErrorSound();
+        }
+
+        public void OpenAttachment()
+        {
+            Debug.Log($"Open: {message.AttachmentUrl}");
+            Application.OpenURL(message.AttachmentUrl);
         }
     }
 }

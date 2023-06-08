@@ -13,6 +13,9 @@ namespace Phone
         public bool Owner = false;
         public bool Failed = false;
 
+        public string AttachmentName;
+        public string AttachmentUrl;
+
         private DateTime time;
 
         [SerializeField] private string stringTime;

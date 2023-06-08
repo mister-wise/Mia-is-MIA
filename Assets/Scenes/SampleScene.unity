@@ -5265,7 +5265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.size
-      value: 62
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].Read
@@ -5794,7 +5794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].Text
-      value: That's it, I'm calling the cops
+      value: Test attachment
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[63].Read
@@ -6227,7 +6227,7 @@ PrefabInstance:
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].Contact
       value: 
-      objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[63].Contact
       value: 
@@ -6482,7 +6482,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].stringTime
-      value: '10/12/2022 '
+      value: 10/12/2022 22:48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[62].AttachmentUrl
+      value: https://github.com/Lisiasty-Pazurek/Mia-is-MIA/
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[62].AttachmentName
+      value: image.png
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
