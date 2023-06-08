@@ -33,7 +33,8 @@ namespace Phone
             Contact = contact;
             Text = text;
             Read = read;
-            time = DateTime.Parse(stringTime);
+            // time = DateTime.Parse(stringTime);
+            time = DateTime.ParseExact(stringTime, "MM/dd/yyyy HH:mm", null);
             this.stringTime = stringTime;
         }
 
@@ -41,7 +42,8 @@ namespace Phone
         {
             try
             {
-                return DateTime.Parse(stringTime);
+                // return DateTime.Parse(stringTime);
+                return DateTime.ParseExact(stringTime, "MM/dd/yyyy HH:mm", null);
             }
             catch
             {
