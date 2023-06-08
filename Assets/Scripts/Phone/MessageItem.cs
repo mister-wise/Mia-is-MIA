@@ -45,6 +45,10 @@ namespace Phone
 
         public void OpenAttachment()
         {
+            if (message.AttachmentUnlock != null)
+            {
+                Notebook.Instance.Unlock(message.AttachmentUnlock);
+            }
             Application.OpenURL(message.AttachmentUrl);
         }
     }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4225aca6eb54fc4b4399064d56b49d2, type: 3}
   m_Name: Benjamin Franklin HS
   m_EditorClassIdentifier: 
-  Name: 
-  Descritpion: 
+  Name: Benjamin Franklin HS
+  Descritpion: Our old high school. Funny few years of shits, giggles, a lot of parties,
+    and not half that time studying. Those were good times. Well, not for all I guess...
   Image: {fileID: 0}

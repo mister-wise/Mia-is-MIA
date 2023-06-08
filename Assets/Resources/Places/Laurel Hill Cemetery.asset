@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4225aca6eb54fc4b4399064d56b49d2, type: 3}
   m_Name: Laurel Hill Cemetery
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Laurel Hill Cemetery
   Descritpion: 
   Image: {fileID: 0}

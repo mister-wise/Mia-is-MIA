@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Sabrina Cafe
   m_EditorClassIdentifier: 
   Name: Sabrina Cafe
-  Descritpion: 
+  Descritpion: Pretty good coffe. A huge plus for the discount I always get. Well,
+    that might be because it's side gig of baby sis, but it still counts!
   Image: {fileID: 21300000, guid: 661a25ceafb76c44da1c17f905a2fe85, type: 3}

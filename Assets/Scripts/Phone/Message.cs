@@ -15,6 +15,7 @@ namespace Phone
 
         public string AttachmentName;
         public string AttachmentUrl;
+        public NotebookItemSO AttachmentUnlock;
 
         private DateTime time;
 
