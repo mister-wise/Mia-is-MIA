@@ -7245,7 +7245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[70].AttachmentUrl
-      value: https://photos.onedrive.com/share/2892EA4A3C79AEB!162467?cid=2892EA4A3C79AEB&authkey=!AI_6lsjh2OU23lw&ithint=photo&e=8ae0Om
+      value: http://aemaze.studio/dat/Class%20photo.png
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentName
