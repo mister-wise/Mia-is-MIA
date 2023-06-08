@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mia
   Descritpion: My sister
-  Image: {fileID: 21300000, guid: e02682b0928a3a7419343ce5281be1e5, type: 3}
+  Image: {fileID: 21300000, guid: d17286fb0a6126142ac5a6d68d84520a, type: 3}

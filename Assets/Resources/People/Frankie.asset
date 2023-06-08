@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513c2e59f08b4e2c9f3239ca52e03af4, type: 3}
-  m_Name: Funeral
+  m_Script: {fileID: 11500000, guid: 59574a4b9c6b421b9db58fc5e0588a2d, type: 3}
+  m_Name: Frankie
   m_EditorClassIdentifier: 
-  Name: Funeral
-  Descritpion: 
-  Image: {fileID: 21300000, guid: 8d151b9927f0da14eb9cba4f01c81542, type: 3}
+  Name: Frankie
+  Descritpion: my buddy
+  Image: {fileID: 21300000, guid: 0696854e0a6618a448101b8570bd4d18, type: 3}
