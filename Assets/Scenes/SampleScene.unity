@@ -2428,7 +2428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -600, y: 0}
+  m_AnchoredPosition: {x: -599.99994, y: 0}
   m_SizeDelta: {x: 1199.9999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
@@ -6536,10 +6536,6 @@ PrefabInstance:
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[70].AttachmentUrl
       value: http://aemaze.studio/dat/class%20photo%20lol.png
-      objectReference: {fileID: 0}
-    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
-      propertyPath: messages.Array.data[124].AttachmentUrl
-      value: '#'
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentName
