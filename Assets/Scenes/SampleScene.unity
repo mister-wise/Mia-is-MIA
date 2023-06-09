@@ -5276,7 +5276,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[0].item
@@ -5285,7 +5285,11 @@ PrefabInstance:
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[1].item
       value: 
-      objectReference: {fileID: 11400000, guid: 48e07ec5a72ca9c4cbdece58709bbf3d, type: 2}
+      objectReference: {fileID: 11400000, guid: 31e25869c361a664c835543a79644e36, type: 2}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[2].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a54d34da48f0b34ab51628e4b420a37, type: 2}
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[0].contact
       value: 
@@ -5294,6 +5298,10 @@ PrefabInstance:
       propertyPath: Unlockers.Array.data[1].contact
       value: 
       objectReference: {fileID: 11400000, guid: 2eb74b2411f21884babf1897c33ad81e, type: 2}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[2].contact
+      value: 
+      objectReference: {fileID: 11400000, guid: 49249021bff64584f86595d09d5627d9, type: 2}
     - target: {fileID: 4051176083269554935, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
