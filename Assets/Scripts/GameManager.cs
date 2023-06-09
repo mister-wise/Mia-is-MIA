@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using Phone;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +13,8 @@ public class GameManager : MonoBehaviour
     public static int ClickCost = 1;
     public static int EventCost = 50;
 
+    [SerializeField] private TimeTriggerMessage[] timeTriggerMessages;
+    
     [SerializeField] private string startStringTime;
     [SerializeField] private int gameHoursLimit = 8;
 
@@ -37,6 +41,20 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             IncreaseGameTime(ClickCost);
+        }
+
+        CheckForTimeTriggerMessage();
+    }
+
+    private void CheckForTimeTriggerMessage()
+    {
+        for (var i = 0; i < timeTriggerMessages.Length; i++)
+        {
+            if (timeTriggerMessages[i].Points <= currentPoint && !timeTriggerMessages[i].Send)
+            {
+                PhoneController.Instance.ReceiveMessage(timeTriggerMessages[i].Message);
+                timeTriggerMessages[i].Send = true;
+            }
         }
     }
 

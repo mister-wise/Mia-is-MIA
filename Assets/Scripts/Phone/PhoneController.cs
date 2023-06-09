@@ -239,8 +239,16 @@ namespace Phone
 
         public void ReceiveMessage(Message message)
         {
+            if (IsWindowOpen(messageThreadWindow) && MessageThread.Contact == message.Contact)
+            {
+                message.SetAsRead();
+                PlayNotificationSound();
+            }
+            else
+            {
+                AddNotification(new MessageNotification(message));
+            }
             MessageList.AddMessage(message);
-            AddNotification(new MessageNotification(message));
         }
 
 
@@ -248,8 +256,10 @@ namespace Phone
         {
             var notificationObject = Instantiate(notificationPrefab, notificationContainer);
             notificationObject.GetComponent<NotificationController>()?.SetNotification(notification);
-            audioSource.PlayOneShot(notificationSound);
+            PlayNotificationSound();
         }
+
+
 
         private bool IsWindowOpen(GameObject window)
         {
@@ -335,6 +345,11 @@ namespace Phone
             ReceiveMessage(new Message(antagonistContact, messageText, false, GameManager.Instance.GetGameTime()));
         }
 
+        private void PlayNotificationSound()
+        {
+            audioSource.PlayOneShot(notificationSound);
+        }
+        
         public void PlayErrorSound()
         {
             audioSource.PlayOneShot(errorSound);

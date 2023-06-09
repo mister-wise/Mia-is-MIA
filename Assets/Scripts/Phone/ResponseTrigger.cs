@@ -10,5 +10,6 @@ namespace Phone
         public ContactSO contact;
         public string keyword;
         public string response;
+        public NotebookItemSO unlock;
     }
 }

@@ -87,13 +87,10 @@ namespace Phone
         {
             foreach (var trigger in responseTrigger)
             {
-                if (message.Text.Contains(trigger.keyword))
-                // if (message.Text.IndexOf(trigger, 0, StringComparison.OrdinalIgnoreCase) != -1)
-                {
-                    yield return new WaitForSeconds(5f);
-                    PhoneController.Instance.ReceiveMessage(new Message(message.Contact, trigger.response, false,
-                        GameManager.Instance.GetGameTime()));
-                }
+                if (message.Text.IndexOf(trigger.keyword, 0, StringComparison.OrdinalIgnoreCase) == -1) continue;
+                yield return new WaitForSeconds(2f);
+                PhoneController.Instance.ReceiveMessage(new Message(message.Contact, trigger.response, false,
+                    GameManager.Instance.GetGameTime(), trigger.unlock));
             }
         }
     }

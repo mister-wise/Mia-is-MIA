@@ -72,36 +72,36 @@ public class Notebook : MonoBehaviour
 
     private void Start()
     {
-        Unlock("Mia");
+        Unlock("Mia", 0);
     }
 
-    public void Unlock(string itemName)
+    public void Unlock(string itemName, int? customCost = null)
     {
         var person = Resources.Load($"People/{itemName}");
         if (person != null)
         {
-            Unlock((PersonSO) person);
+            Unlock((PersonSO) person, customCost);
             return;
         }
 
         var place = Resources.Load($"Places/{itemName}");
         if (place != null)
         {
-            Unlock((PlaceSO) place);
+            Unlock((PlaceSO) place, customCost);
             return;
         }
 
         var clue = Resources.Load($"Clues/{itemName}");
         if (clue != null)
         {
-            Unlock((ClueSO) clue);
+            Unlock((ClueSO) clue, customCost);
             return;
         }
 
         Debug.LogError($"Can't unlock {itemName}. Item not found.");
     }
 
-    public void Unlock(NotebookItemSO item)
+    public void Unlock(NotebookItemSO item, int? customCost = null)
     {
         if (IsUnlock(item)) return;
         GameObject itemObject = null;
@@ -126,7 +126,7 @@ public class Notebook : MonoBehaviour
 
         if (itemObject != null) itemObject.GetComponent<NotebookItem>()?.SetItem(item);
         
-        GameManager.Instance.IncreaseGameTime(GameManager.EventCost);
+        GameManager.Instance.IncreaseGameTime(customCost ?? GameManager.EventCost);
 
         CheckForResultSectionAvailable();
     }
