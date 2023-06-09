@@ -4434,7 +4434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -602.49994, y: 40}
+  m_AnchoredPosition: {x: -602.5, y: 40}
   m_SizeDelta: {x: 1195, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
@@ -4934,7 +4934,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[0]
@@ -4948,6 +4948,10 @@ PrefabInstance:
       propertyPath: images.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 642d11c0eb145234ebbb5523ce17cb92, type: 2}
+    - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
+      propertyPath: images.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44a59ae6748b5ff4289533c1cd1c635c, type: 2}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[6]
       value: 
