@@ -6650,7 +6650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[0].item
@@ -6667,7 +6667,7 @@ PrefabInstance:
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[3].item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: be52fc6322de10943bb873ba3b9773bd, type: 2}
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[0].contact
       value: 
@@ -6683,7 +6683,7 @@ PrefabInstance:
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[3].contact
       value: 
-      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
     - target: {fileID: 4051176083269554935, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
