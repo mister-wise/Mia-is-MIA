@@ -64,7 +64,7 @@ namespace Phone
             return GetDateTime().ToString(pattern);
         }
 
-        public string GetShortText(int limit = 100)
+        public string GetShortText(int limit = 40)
         {
             var flatText = Text.Replace("<br>", " ");
             return flatText.Length > limit ? $"{flatText.Substring(0, limit - 3)}..." : flatText;
