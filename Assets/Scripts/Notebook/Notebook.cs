@@ -60,6 +60,7 @@ public class Notebook : MonoBehaviour
     [SerializeField] private TMP_Dropdown whoDropdown;
     [SerializeField] private TMP_Dropdown whereDropdown;
     [SerializeField] private TMP_Dropdown whyDropdown;
+    [SerializeField] private TMP_Dropdown withDropdown;
 
     [SerializeField] private PersonSO correctWho;
     [SerializeField] private PlaceSO correctWhere;
@@ -155,6 +156,7 @@ public class Notebook : MonoBehaviour
         GameManager.Instance.EndGame(
             correctWhere: whereDropdown.options[whereDropdown.value].text == correctWhere.Name,
             correctWho: whoDropdown.options[whoDropdown.value].text == correctWho.Name,
-            correctWhy: whyDropdown.options[whyDropdown.value].text == correctWhy.Name);
+            correctWhy: whyDropdown.options[whyDropdown.value].text == correctWhy.Name,
+            with: withDropdown.value);
     }
 }

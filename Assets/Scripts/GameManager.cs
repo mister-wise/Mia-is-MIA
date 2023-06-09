@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using Phone;
 using UnityEngine;
 
@@ -11,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     public static int ClickCost = 1;
-    public static int EventCost = 50;
+    public static int EventCost = 20;
 
     [SerializeField] private TimeTriggerMessage[] timeTriggerMessages;
     
@@ -22,10 +18,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxCurrentPoint = 0;
     [SerializeField] private int maxPoint = 500;
     [SerializeField] private float increasePointSpeed = 0.2f;
+    
+    [SerializeField] private EndGame endGame;
 
     private DateTime startTime;
     private DateTime endTime;
     private DateTime currentTime;
+
+    private bool isEndGame = false;
     
     private void Awake()
     {
@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseGameTime(int point = 1)
     {
+        if(isEndGame) return;
         if(maxCurrentPoint < maxPoint)
             maxCurrentPoint += point;
     }
@@ -87,13 +88,14 @@ public class GameManager : MonoBehaviour
     {
         if (currentPoint >= maxPoint)
         {
-            EndGame(false, false, false);
+            EndGame(false, false, false, outOfTime: true);
         }
     }
 
-    public void EndGame(bool correctWhere, bool correctWho, bool correctWhy)
+    public void EndGame(bool correctWhere, bool correctWho, bool correctWhy, int with = 0, bool outOfTime = false)
     {
-        throw new NotImplementedException();
+        isEndGame = true;
+        endGame.SetEnding(correctWhere, correctWho, correctWhy, with, outOfTime);
     }
 
     private static DateTime LerpDateTime(DateTime startDateTime, DateTime endDateTime, double t)

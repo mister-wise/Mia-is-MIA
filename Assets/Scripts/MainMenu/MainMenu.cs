@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator LoadSceneAsync()
     {
-        var scene = SceneManager.LoadSceneAsync(1);
+        var scene = SceneManager.LoadSceneAsync("SampleScene");
         scene.allowSceneActivation = true;
 
         do
