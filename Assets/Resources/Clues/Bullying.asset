@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 513c2e59f08b4e2c9f3239ca52e03af4, type: 3}
-  m_Name: Funeral
+  m_Name: Bullying
   m_EditorClassIdentifier: 
-  Name: Funeral
-  Descritpion: 'Billy funeral. I did not '
-  Image: {fileID: 21300000, guid: 8d151b9927f0da14eb9cba4f01c81542, type: 3}
+  Name: 
+  Descritpion: 
+  Image: {fileID: 0}

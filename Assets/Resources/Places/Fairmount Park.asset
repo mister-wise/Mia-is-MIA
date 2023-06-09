@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4225aca6eb54fc4b4399064d56b49d2, type: 3}
-  m_Name: Farimount Park
+  m_Name: Fairmount Park
   m_EditorClassIdentifier: 
   Name: Fairmount Park
   Descritpion: Man, I love this place! It's all so green, and calm...and comfy! Really

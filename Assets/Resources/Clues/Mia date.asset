@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513c2e59f08b4e2c9f3239ca52e03af4, type: 3}
   m_Name: Mia date
   m_EditorClassIdentifier: 
-  Name: 
-  Descritpion: 
-  Image: {fileID: 0}
+  Name: Mia date
+  Descritpion: So Mia's dating. Well, good for her, I guess. Or not. Hope she's found
+    the right one
+  Image: {fileID: 21300000, guid: 581ffc9985af9c447a172ad798d750b7, type: 3}

@@ -2695,12 +2695,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 47b21a3417eacc943bb19da1abacb337, type: 2}
+    - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
+      propertyPath: images.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 00597c23c6667654b9ee5bb7fa76a61b, type: 2}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[6]
       value: 
