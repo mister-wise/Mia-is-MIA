@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Laurel Hill Cemetery
   m_EditorClassIdentifier: 
   Name: Laurel Hill Cemetery
-  Descritpion: 
-  Image: {fileID: 0}
+  Descritpion: A graveyard, what's there to add? Convenient neighborhood, clam neighbors,
+    rent free? Hell, with my landlord I'd settle for no rent any day, even though
+    the place always gives me the creeps
+  Image: {fileID: 21300000, guid: 64e77d0fc52b24f43b759b93b3864fd6, type: 3}

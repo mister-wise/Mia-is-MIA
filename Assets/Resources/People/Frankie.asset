@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Frankie
   m_EditorClassIdentifier: 
   Name: Frankie
-  Descritpion: my buddy
+  Descritpion: Frankie. The best buddy you could find yourself in a hundred lifetimes.
+    You need help or you want to score the biggest hungover in your lifetime - you
+    call Frank, he can do both.
   Image: {fileID: 21300000, guid: 0696854e0a6618a448101b8570bd4d18, type: 3}
