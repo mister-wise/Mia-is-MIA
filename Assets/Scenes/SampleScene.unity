@@ -3943,7 +3943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -599.99994, y: 0}
+  m_AnchoredPosition: {x: -600, y: 0}
   m_SizeDelta: {x: 1199.9999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
@@ -5648,7 +5648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.size
-      value: 126
+      value: 137
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].Read
@@ -6721,8 +6721,104 @@ PrefabInstance:
       value: 'In case you lost his number:'
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].Text
+      value: Hi
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].Text
+      value: You there? Jess asked me to check up on you
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[128].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[128].Text
+      value: Says you don't return her calls, mails, anything
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[129].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[129].Text
+      value: Not a nice thing to do, ghosting a lady like that, pal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[12].Owner
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[130].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[130].Text
+      value: Okay, listen. I know it's been quite some time since we talked. Knowing
+        you, I'm nearly certain you're still pissed at me. But that blue eye you
+        gave me after prom was really enough to show that, mate. You've made your
+        point, wouldn't it be nice to stop already?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[131].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[131].Text
+      value: I get it, alright? What we did wasn't nice, yeah? By any means. But
+        come on, man. We were a bunch of dumb teenage dudes in a high school, looking
+        to form a group, looking to impress the ladies. You either took part in it,
+        or your life was miserable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[132].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[132].Text
+      value: I chose to take part. I'm not proud of what I did, but it happened.
+        I'm sorry, but there's no coming back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[133].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[133].Text
+      value: So, would you please stop being a crybaby and write back? Something?
+        Anything?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[134].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[134].Text
+      value: Okay, if not to me, then maybe to Jess? At least?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[135].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[135].Text
+      value: No?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[136].Read
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[136].Text
+      value: Fine then, go fuck yourself. I knew reaching out was a bad idea
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[13].Owner
@@ -7051,6 +7147,50 @@ PrefabInstance:
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[124].Owner
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[128].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[129].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[130].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[131].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[132].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[133].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[134].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[135].Owner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[136].Owner
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[1].Contact
@@ -7552,6 +7692,50 @@ PrefabInstance:
       propertyPath: messages.Array.data[125].Contact
       value: 
       objectReference: {fileID: 11400000, guid: 49249021bff64584f86595d09d5627d9, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[128].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[129].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[130].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[131].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[132].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[133].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[134].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[135].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[136].Contact
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].stringTime
       value: 10/12/2022 13:41
@@ -8057,6 +8241,50 @@ PrefabInstance:
       value: 17/10/2021 16:56
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].stringTime
+      value: 17/10/2021 17:01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].stringTime
+      value: 17/10/2021 17:01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[128].stringTime
+      value: 17/10/2021 17:02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[129].stringTime
+      value: 17/10/2021 17:02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[130].stringTime
+      value: 17/10/2021 17:09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[131].stringTime
+      value: 17/10/2021 17:09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[132].stringTime
+      value: 17/10/2021 17:10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[133].stringTime
+      value: 17/10/2021 17:15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[134].stringTime
+      value: 17/10/2021 17:20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[135].stringTime
+      value: 17/10/2021 17:23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[136].stringTime
+      value: 17/10/2021 17:24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentUrl
       value: https://github.com/Lisiasty-Pazurek/Mia-is-MIA/
       objectReference: {fileID: 0}
@@ -8075,6 +8303,10 @@ PrefabInstance:
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[125].AttachmentUrl
       value: '#'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].AttachmentUrl
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentName
@@ -8121,6 +8353,14 @@ PrefabInstance:
       value: +18332405104
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].AttachmentName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[127].AttachmentName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[70].AttachmentUnlock
       value: 
       objectReference: {fileID: 11400000, guid: 883290d177d9977418d1eb4d48ab8917, type: 2}
@@ -8136,6 +8376,10 @@ PrefabInstance:
       propertyPath: messages.Array.data[125].AttachmentUnlock
       value: 
       objectReference: {fileID: 11400000, guid: be52fc6322de10943bb873ba3b9773bd, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[126].AttachmentUnlock
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
 --- !u!114 &7076698353172079467 stripped
