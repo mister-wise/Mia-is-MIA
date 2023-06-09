@@ -8,6 +8,7 @@ using UnityEngine;
 public class Intro : MonoBehaviour
 {
     [SerializeField] private ContactSO miaContact;
+
     void Start()
     {
         StartCoroutine(PlayIntro());
@@ -16,6 +17,7 @@ public class Intro : MonoBehaviour
     IEnumerator PlayIntro()
     {
         yield return new WaitForSeconds(3);
-        PhoneController.Instance.AddMissingCall(miaContact, 3);
+        PhoneController.Instance.ReceiveMessage(new Message(miaContact, "The owner of this number is available again",
+            false, GameManager.Instance.GetGameTime()));
     }
 }

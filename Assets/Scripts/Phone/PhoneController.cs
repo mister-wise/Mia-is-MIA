@@ -192,6 +192,7 @@ namespace Phone
             BackToHome();
             MessageThread.Rebuild(contact, MessageList.GetContactMessages(contact));
             messageThreadWindow.transform.DOMoveY(0, .5f);
+            MessageThread.ScrollToBottom();
         }
         
         public void CloseMessageTheadWindow()
@@ -328,9 +329,9 @@ namespace Phone
             else
             {
                 messageItem.SetNotDeliveredStatus();
-                MessageThread.ScrollToBottom();
                 Instance.SendWarning(message.Contact);
             }
+            MessageThread.ScrollToBottom();
         }
 
         public void SendWarning(ContactSO contact)
