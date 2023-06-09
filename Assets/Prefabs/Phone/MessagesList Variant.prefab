@@ -3835,5 +3835,9 @@ PrefabInstance:
       propertyPath: messages.Array.data[126].AttachmentUnlock
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[156].AttachmentUnlock
+      value: 
+      objectReference: {fileID: 11400000, guid: 355f308de15d52241aeb697285e0f60c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
