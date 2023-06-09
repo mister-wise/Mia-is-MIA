@@ -388,7 +388,7 @@ MonoBehaviour:
       AttachmentUrl: 
       AttachmentUnlock: {fileID: 0}
       stringTime: 
-    Points: 334
+    Points: 300
     Send: 0
   - Message:
       Contact: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
@@ -2650,7 +2650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -602.49994, y: 40}
+  m_AnchoredPosition: {x: -602.5, y: 40}
   m_SizeDelta: {x: 1195, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
@@ -3097,6 +3097,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: Image1
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c46f66d1c1b23d42b69f80cdbd4eaba, type: 3}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: Image2
+      value: 
+      objectReference: {fileID: 21300000, guid: fcb7de45d88c21c48bddff3f6ba24b0c, type: 3}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: Image3
+      value: 
+      objectReference: {fileID: 21300000, guid: fcb7de45d88c21c48bddff3f6ba24b0c, type: 3}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: outOfTimeText
+      value: "You've run out of time.. You didn\u2019t manage to save your sister."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: outOfTimeImage
+      value: 
+      objectReference: {fileID: 21300000, guid: fcb7de45d88c21c48bddff3f6ba24b0c, type: 3}
     - target: {fileID: 1519581421710957663, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
       propertyPath: m_Name
       value: EndGame
