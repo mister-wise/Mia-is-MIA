@@ -390,12 +390,26 @@ MonoBehaviour:
       stringTime: 
     Points: 334
     Send: 0
+  - Message:
+      Contact: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+      Text: 'I''ll give you one hint and it is a last one: Find where is Chapel of
+        Peace located. Maybe you still have a chance if you''ll hurry.'
+      Read: 0
+      Owner: 0
+      Failed: 0
+      Unlock: {fileID: 0}
+      AttachmentName: 
+      AttachmentUrl: 
+      AttachmentUnlock: {fileID: 0}
+      stringTime: 
+    Points: 410
+    Send: 0
   startStringTime: 10/12/2022 23:00
   gameHoursLimit: 8
   currentPoint: 0
   maxCurrentPoint: 0
   maxPoint: 500
-  increasePointSpeed: 1
+  increasePointSpeed: 2
 --- !u!4 &315359198
 Transform:
   m_ObjectHideFlags: 0
@@ -2618,7 +2632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -602.49994, y: 40}
+  m_AnchoredPosition: {x: -602.5, y: 40}
   m_SizeDelta: {x: 1195, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353

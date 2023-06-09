@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Benjamin Franklin High School
   Image: {fileID: 21300000, guid: 620c49f5da44d364cb6f9abbe620761a, type: 3}
-  Geolocation: n/a
-  Date: n/a
+  Geolocation: 39.96336019097115, -75.16269074755942
+  Date: 16/09/2015
   Unlock: {fileID: 11400000, guid: 2c891d225b590e64bae3827e02864906, type: 2}

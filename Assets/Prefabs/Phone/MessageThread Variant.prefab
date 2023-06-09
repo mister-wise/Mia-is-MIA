@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 550391337946876645, guid: 606d9b8d41ca3014996228bab2d49b97, type: 3}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: messages.Array.data[0].Text
@@ -270,11 +270,11 @@ PrefabInstance:
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[2].unlock
       value: 
-      objectReference: {fileID: 11400000, guid: 7be5434b420b21648a5f340ee2d597a5, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[3].unlock
       value: 
-      objectReference: {fileID: 11400000, guid: 0e0612cf3c13eb94a9e535c42870f973, type: 2}
+      objectReference: {fileID: 11400000, guid: 7be5434b420b21648a5f340ee2d597a5, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[4].unlock
       value: 
@@ -282,9 +282,13 @@ PrefabInstance:
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[5].unlock
       value: 
-      objectReference: {fileID: 11400000, guid: c88d4a5c09327214eade7d635c5997fe, type: 2}
+      objectReference: {fileID: 11400000, guid: 0e0612cf3c13eb94a9e535c42870f973, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[6].unlock
+      value: 
+      objectReference: {fileID: 11400000, guid: c88d4a5c09327214eade7d635c5997fe, type: 2}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[7].unlock
       value: 
       objectReference: {fileID: 11400000, guid: c88d4a5c09327214eade7d635c5997fe, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
@@ -309,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[2].keyword
-      value: Fear
+      value: '?'
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[3].contact
@@ -317,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[3].keyword
-      value: Laurel
+      value: Fear
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[4].contact
@@ -325,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[4].keyword
-      value: Cemetery
+      value: Laurel
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[5].contact
@@ -333,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[5].keyword
-      value: Billy
+      value: Cemetery
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[6].contact
@@ -341,6 +345,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[6].keyword
+      value: Billy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[7].contact
+      value: 
+      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[7].keyword
       value: Funeral
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
@@ -354,13 +366,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[2].response
-      value: Oh.. yes. Everyone would like to live without fear, I gues you know
-        what I am talking about
+      value: Stop asking stupid questions
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[3].response
-      value: It seems that you know the place well. Maybe this time you are not going
-        to miss it. Better hurry, time is running out.
+      value: Oh.. yes. Everyone would like to live without fear, I gues you know
+        what I am talking about
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[4].response
@@ -369,11 +380,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[5].response
+      value: It seems that you know the place well. Maybe this time you are not going
+        to miss it. Better hurry, time is running out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[6].response
       value: I guess you already know what is happening here. I am glad, now both
         of us has to be alert.
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
-      propertyPath: responseTrigger.Array.data[6].response
+      propertyPath: responseTrigger.Array.data[7].response
       value: I guess you already know what is happening here. I am glad, now both
         of us has to be alert.
       objectReference: {fileID: 0}
