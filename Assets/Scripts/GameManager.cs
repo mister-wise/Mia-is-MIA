@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour
     {
         if (currentPoint >= maxPoint)
         {
-            EndGame();
+            EndGame(false, false, false);
         }
     }
 
-    private void EndGame()
+    public void EndGame(bool correctWhere, bool correctWho, bool correctWhy)
     {
         throw new NotImplementedException();
     }

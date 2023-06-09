@@ -152,20 +152,9 @@ public class Notebook : MonoBehaviour
 
     public void FinalCheck()
     {
-        Debug.Log("Check!");
-        if (whereDropdown.options[whereDropdown.value].text == correctWhere.Name)
-        {
-            Debug.Log("You found Mia! She's safe now!");
-        }
-        
-        if (whoDropdown.options[whoDropdown.value].text == correctWho.Name)
-        {
-            Debug.Log("With your help, the police arrested the kidnapper.");
-        }
-        
-        if (whyDropdown.options[whyDropdown.value].text == correctWhy.Name)
-        {
-            Debug.Log("???");
-        }
+        GameManager.Instance.EndGame(
+            correctWhere: whereDropdown.options[whereDropdown.value].text == correctWhere.Name,
+            correctWho: whoDropdown.options[whoDropdown.value].text == correctWho.Name,
+            correctWhy: whyDropdown.options[whyDropdown.value].text == correctWhy.Name);
     }
 }
