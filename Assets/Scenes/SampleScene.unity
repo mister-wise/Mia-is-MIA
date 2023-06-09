@@ -5291,6 +5291,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6a54d34da48f0b34ab51628e4b420a37, type: 2}
     - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[3].item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: Unlockers.Array.data[0].contact
       value: 
       objectReference: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
@@ -5302,6 +5306,10 @@ PrefabInstance:
       propertyPath: Unlockers.Array.data[2].contact
       value: 
       objectReference: {fileID: 11400000, guid: 49249021bff64584f86595d09d5627d9, type: 2}
+    - target: {fileID: 4051176083269554934, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
+      propertyPath: Unlockers.Array.data[3].contact
+      value: 
+      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
     - target: {fileID: 4051176083269554935, guid: 66c5a05bda129a94187c806785198ad6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7269,7 +7277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[70].AttachmentUrl
-      value: http://aemaze.studio/dat/Class%20photo.png
+      value: http://aemaze.studio/dat/class%20photo%20lol.png
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentName
@@ -7307,6 +7315,10 @@ PrefabInstance:
       propertyPath: messages.Array.data[70].AttachmentName
       value: image.png
       objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[70].AttachmentUnlock
+      value: 
+      objectReference: {fileID: 11400000, guid: 883290d177d9977418d1eb4d48ab8917, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
 --- !u!114 &7076698353172079467 stripped
