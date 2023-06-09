@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1269932829876390201, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: m_Name
-      value: MessageThread
+      value: MessageThread Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1269932830080249797, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: m_ScrollSensitivity
@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 550391337946876645, guid: 606d9b8d41ca3014996228bab2d49b97, type: 3}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: messages.Array.data[0].Text
@@ -272,8 +272,20 @@ PrefabInstance:
       value: Love
       objectReference: {fileID: 0}
     - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[1].contact
+      value: 
+      objectReference: {fileID: 11400000, guid: caca96517ff454e45a32e7f2ea579428, type: 2}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[1].keyword
+      value: Fear
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: responseTrigger.Array.data[0].response
       value: Fuck You
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392640800511811881, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
+      propertyPath: responseTrigger.Array.data[1].response
+      value: Oh.. yes. T live without fear
       objectReference: {fileID: 0}
     - target: {fileID: 6573609677264791233, guid: 22f57af9f168779499ed0a2d86d7190a, type: 3}
       propertyPath: m_AnchoredPosition.x
