@@ -125,6 +125,8 @@ public class Notebook : MonoBehaviour
         }
 
         if (itemObject != null) itemObject.GetComponent<NotebookItem>()?.SetItem(item);
+        
+        GameManager.Instance.IncreaseGameTime(GameManager.EventCost);
 
         CheckForResultSectionAvailable();
     }
@@ -142,7 +144,7 @@ public class Notebook : MonoBehaviour
 
     public void CheckForResultSectionAvailable()
     {
-        if (persons.Count >= 1 && places.Count >= 1 && clues.Count >= 1)
+        if (GameManager.Instance.IsAfterMidnight() || (persons.Count >= 3 && places.Count >= 3 && clues.Count >= 3))
         {
             resultSection.SetActive(true);
         }

@@ -51,7 +51,7 @@ namespace Phone
             }
             catch
             {
-                return DateTime.Now;
+                return GameManager.Instance.GetGameTime();
             }
         }
 
