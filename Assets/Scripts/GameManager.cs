@@ -18,9 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string startStringTime;
     [SerializeField] private int gameHoursLimit = 8;
 
-    [SerializeField] private int currentPoint = 0;
+    [SerializeField] private float currentPoint = 0;
+    [SerializeField] private int maxCurrentPoint = 0;
     [SerializeField] private int maxPoint = 500;
-    
+    [SerializeField] private float increasePointSpeed = 0.2f;
+
     private DateTime startTime;
     private DateTime endTime;
     private DateTime currentTime;
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
             IncreaseGameTime(ClickCost);
         }
 
+        HandleGameTime();
+
         CheckForTimeTriggerMessage();
     }
 
@@ -62,7 +66,19 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseGameTime(int point = 1)
     {
-        currentPoint += point;
+        if(maxCurrentPoint < maxPoint)
+            maxCurrentPoint += point;
+    }
+    
+    private void HandleGameTime()
+    {
+        if(currentPoint == maxCurrentPoint) return;
+        currentPoint += increasePointSpeed * Time.deltaTime;
+        if (currentPoint > maxCurrentPoint)
+        {
+            currentPoint = maxCurrentPoint;
+        }
+            
         Notebook.Instance.CheckForResultSectionAvailable();
         CheckForEndGame();
     }
