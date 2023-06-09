@@ -2431,8 +2431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -600, y: 0}
-  m_SizeDelta: {x: 1199.9999, y: 0}
+  m_AnchoredPosition: {x: -602.5, y: 40}
+  m_SizeDelta: {x: 1195, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2079436353
 AudioSource:
@@ -2674,7 +2674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086149113576613501, guid: 8257359c5a3192545bdbaae71d699aba, type: 3}
       propertyPath: contacts.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1086149113576613501, guid: 8257359c5a3192545bdbaae71d699aba, type: 3}
       propertyPath: contacts.Array.data[1]
@@ -2684,6 +2684,10 @@ PrefabInstance:
       propertyPath: contacts.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 49249021bff64584f86595d09d5627d9, type: 2}
+    - target: {fileID: 1086149113576613501, guid: 8257359c5a3192545bdbaae71d699aba, type: 3}
+      propertyPath: contacts.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: bec24b7aa45496c4981635d5e87b5172, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8257359c5a3192545bdbaae71d699aba, type: 3}
 --- !u!1001 &1900542573274862566
@@ -2695,7 +2699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[0]
@@ -2705,6 +2709,10 @@ PrefabInstance:
       propertyPath: images.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 00597c23c6667654b9ee5bb7fa76a61b, type: 2}
+    - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
+      propertyPath: images.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 642d11c0eb145234ebbb5523ce17cb92, type: 2}
     - target: {fileID: 1900542573140243808, guid: a0f77237b33abf54385d5c71f4b0663a, type: 3}
       propertyPath: images.Array.data[6]
       value: 
@@ -3468,6 +3476,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -700.00024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232882628861874773, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3541,7 +3553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3232882628957093994, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -14.669922
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 3232882628966925171, guid: 69a5b16e13d4f574c868978610d24d21, type: 3}
       propertyPath: m_SizeDelta.x

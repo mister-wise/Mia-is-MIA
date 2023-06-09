@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Billy
   m_EditorClassIdentifier: 
   Name: Billy
-  Descritpion: R.I.P not gonna miss him tho
+  Descritpion: Billy. Nerd, creep, and high school weirdo. Always by himself, with
+    thoughts somewhere else. I've never seen him skip classes, go to a party, or
+    even drink booze. A sad and lonely man, indeed
   Image: {fileID: 21300000, guid: 2374c8804ac67fc4e929a56cc85bbc31, type: 3}
