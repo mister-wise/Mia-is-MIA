@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miaContact: {fileID: 11400000, guid: e53c152711f779a4bad7d13c12e37409, type: 2}
+  frankContact: {fileID: 11400000, guid: 2eb74b2411f21884babf1897c33ad81e, type: 2}
 --- !u!4 &733895183
 Transform:
   m_ObjectHideFlags: 0

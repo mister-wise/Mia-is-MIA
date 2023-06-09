@@ -267,7 +267,7 @@ namespace Phone
             return Mathf.Round(window.transform.position.y) == 0;
         }
 
-        private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count=1)
+        public void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count=1)
         {
             var childCount = recentCallsContainer.transform.childCount;
             if (childCount > 0)

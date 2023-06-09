@@ -8,9 +8,13 @@ using UnityEngine;
 public class Intro : MonoBehaviour
 {
     [SerializeField] private ContactSO miaContact;
+    [SerializeField] private ContactSO frankContact;
 
     void Start()
     {
+        PhoneController.Instance.AddCallToHistory(miaContact, RecentCallStatus.Outgoing, 2);
+        PhoneController.Instance.AddCallToHistory(frankContact, RecentCallStatus.Incoming);
+        PhoneController.Instance.AddCallToHistory(miaContact, RecentCallStatus.Missed, 5);
         StartCoroutine(PlayIntro());
     }
 
