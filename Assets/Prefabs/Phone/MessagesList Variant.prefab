@@ -2604,6 +2604,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[197].Unlock
+      value: 
+      objectReference: {fileID: 11400000, guid: 7be5434b420b21648a5f340ee2d597a5, type: 2}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[199].Unlock
       value: 
       objectReference: {fileID: 11400000, guid: 32dd6a7ae8212314786ac84ae0fea4d7, type: 2}
