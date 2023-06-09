@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.size
-      value: 208
+      value: 206
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[0].Read
@@ -1866,16 +1866,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[204].Text
-      value: Fuck you, I'm done with you. Hope you'll earn yourself a sentence or
-        end up in a ditch, you fucking trash
+      value: You ever heard that saying, that everything you do has consequences?
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[205].Read
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[205].Text
-      value: You ever heard that saying, that everything you do has consequences?
+      value: Yeah, so? I thought we were done, like a long time ago
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[206].Read
@@ -1883,7 +1882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[206].Text
-      value: You ever heard that saying, that everything you do has consequences?
+      value: Yeah, so? I thought we were done, like a long time ago
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[207].Read
@@ -2467,11 +2466,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[204].Owner
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[205].Owner
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
+      propertyPath: messages.Array.data[206].Owner
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[207].Owner
@@ -4135,15 +4138,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[204].stringTime
-      value: 10/03/2015 11:32
+      value: 08/18/2022 21:37
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[205].stringTime
-      value: 08/18/2022
+      value: 08/18/2022 21:40
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[206].stringTime
-      value: 08/18/2022 21:37
+      value: 08/18/2022 21:40
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[207].stringTime
