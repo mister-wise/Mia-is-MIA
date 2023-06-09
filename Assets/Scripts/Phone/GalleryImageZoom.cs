@@ -31,7 +31,7 @@ namespace Phone
 
         private string getDetailsText(GalleryImageSO galleryImage)
         {
-            return $"<b>Time:</b><br>{galleryImage.Date}<br><br><b>Device:</b><br>WisePhone<br><br><b>Location:</b><br>{galleryImage.Geolocation}";
+            return $"<b>Filename:</b><br>{galleryImage.Name}<br><br><b>Time:</b><br>{galleryImage.Date}<br><br><b>Location:</b><br>{galleryImage.Geolocation}";
         }
     }
 }
