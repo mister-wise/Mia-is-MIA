@@ -125,6 +125,8 @@ public class Notebook : MonoBehaviour
         }
 
         if (itemObject != null) itemObject.GetComponent<NotebookItem>()?.SetItem(item);
+        
+        GameManager.Instance.IncreaseGameTime(GameManager.EventCost);
 
         CheckForResultSectionAvailable();
     }
@@ -142,7 +144,7 @@ public class Notebook : MonoBehaviour
 
     public void CheckForResultSectionAvailable()
     {
-        if (persons.Count >= 1 && places.Count >= 1 && clues.Count >= 1)
+        if (GameManager.Instance.IsAfterMidnight() || (persons.Count >= 3 && places.Count >= 3 && clues.Count >= 3))
         {
             resultSection.SetActive(true);
         }
@@ -150,20 +152,9 @@ public class Notebook : MonoBehaviour
 
     public void FinalCheck()
     {
-        Debug.Log("Check!");
-        if (whereDropdown.options[whereDropdown.value].text == correctWhere.Name)
-        {
-            Debug.Log("You found Mia! She's safe now!");
-        }
-        
-        if (whoDropdown.options[whoDropdown.value].text == correctWho.Name)
-        {
-            Debug.Log("With your help, the police arrested the kidnapper.");
-        }
-        
-        if (whyDropdown.options[whyDropdown.value].text == correctWhy.Name)
-        {
-            Debug.Log("???");
-        }
+        GameManager.Instance.EndGame(
+            correctWhere: whereDropdown.options[whereDropdown.value].text == correctWhere.Name,
+            correctWho: whoDropdown.options[whoDropdown.value].text == correctWho.Name,
+            correctWhy: whyDropdown.options[whyDropdown.value].text == correctWhy.Name);
     }
 }

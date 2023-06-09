@@ -100,7 +100,7 @@ namespace Phone
         }
 
         // TODO: Change to real in game time
-        private string GetGameTime() => DateTime.Now.ToString("HH:mm");
+        private string GetGameTime() => GameManager.Instance.GetGameTime().ToString("HH:mm");
         
         public void BackToHome()
         {
@@ -313,7 +313,7 @@ namespace Phone
             yield return new WaitForSeconds(1.5f);
             if (message.Contact == antagonistContact || message.Contact == miaContact)
             {
-                
+                StartCoroutine(MessageThread.CheckForResponse(message));
             }
             else
             {
@@ -332,7 +332,7 @@ namespace Phone
                 messageText = "Don't try it. This is the only warning.";
             }
            
-            ReceiveMessage(new Message(antagonistContact, messageText, false, DateTime.Now));
+            ReceiveMessage(new Message(antagonistContact, messageText, false, GameManager.Instance.GetGameTime()));
         }
 
         public void PlayErrorSound()

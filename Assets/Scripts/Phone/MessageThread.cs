@@ -12,9 +12,11 @@ namespace Phone
     public class MessageThread : MonoBehaviour
     {
         public ContactSO Contact { get; private set; }
-        
+
         [SerializeField] private List<Message> debugMessages;
-        
+
+        [SerializeField] private List<ResponseTrigger> responseTrigger;
+
         [SerializeField] private TMP_Text messageHeader;
         [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private Transform messageContainer;
@@ -31,8 +33,9 @@ namespace Phone
         {
             Contact = contact;
             messageHeader.text = contact.Name;
-                
-            foreach (Transform child in messageContainer) {
+
+            foreach (Transform child in messageContainer)
+            {
                 Destroy(child.gameObject);
             }
 
@@ -45,23 +48,23 @@ namespace Phone
                 else
                 {
                     Instantiate(incomingMessagePrefab, messageContainer).GetComponent<MessageItem>()?.SetItem(message);
-
                 }
             }
         }
 
         public MessageItem AddMessageToOpenedThread(Message message)
         {
-            var newMessage = Instantiate(message.Owner ? outgoingMessagePrefab : incomingMessagePrefab, messageContainer);
+            var newMessage = Instantiate(message.Owner ? outgoingMessagePrefab : incomingMessagePrefab,
+                messageContainer);
             var messageItem = newMessage.GetComponent<MessageItem>();
             messageItem.SetItem(message);
             messageItem.PlayPopUpAnimation();
 
             ScrollToBottom();
-            
+
             return messageItem;
         }
-        
+
         public void ScrollToBottom()
         {
             Canvas.ForceUpdateCanvases();
@@ -72,12 +75,26 @@ namespace Phone
         public void SendMessage()
         {
             if (messageInput.text.Trim() == "") return;
-            var message = new Message(Contact, messageInput.text, true, DateTime.Now)
+            var message = new Message(Contact, messageInput.text, true, GameManager.Instance.GetGameTime())
             {
                 Owner = true
             };
             messageInput.text = "";
             StartCoroutine(PhoneController.Instance.HandleSendMessage(message));
+        }
+
+        public IEnumerator CheckForResponse(Message message)
+        {
+            foreach (var trigger in responseTrigger)
+            {
+                if (message.Text.Contains(trigger.keyword))
+                // if (message.Text.IndexOf(trigger, 0, StringComparison.OrdinalIgnoreCase) != -1)
+                {
+                    yield return new WaitForSeconds(5f);
+                    PhoneController.Instance.ReceiveMessage(new Message(message.Contact, trigger.response, false,
+                        GameManager.Instance.GetGameTime()));
+                }
+            }
         }
     }
 }
