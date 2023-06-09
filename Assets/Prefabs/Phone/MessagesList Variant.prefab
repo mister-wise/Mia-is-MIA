@@ -1456,7 +1456,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[157].Text
-      value: here, check it out yourself
+      value: Well then... whatever she's doing, whoever she's dating - that's her
+        issue
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[15].Owner
@@ -3184,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[157].AttachmentUrl
-      value: https://www.facebook.com/profile.php?id=100093416375757
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[62].AttachmentName
@@ -3244,7 +3245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[157].AttachmentName
-      value: https://www.facebook.com/profile.php?id=100093416375757
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6941936764947992881, guid: 5ea80bcc1be96b04b8136ba3fdbdde3e, type: 3}
       propertyPath: messages.Array.data[70].AttachmentUnlock
