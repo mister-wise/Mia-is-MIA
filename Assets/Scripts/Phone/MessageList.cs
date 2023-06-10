@@ -32,8 +32,6 @@ namespace Phone
 
             foreach (var contact in uniqueNames)
             {
-                // Debug.Log(messages.Where(message => message.Contact == contact)
-                //     .OrderByDescending(message => message.Time).ToArray());
                 var lastMessage = messages.Where(message => message.Contact == contact)
                     .OrderByDescending(message => message.GetDateTime()).First();
                 Instantiate(messagesPrefab, messagesListContainer).GetComponent<MessageThreadItem>()
@@ -61,7 +59,7 @@ namespace Phone
             var contactMessages = messages.Where(message => message.Contact == contact).ToList();
             foreach (var message in contactMessages)
             {
-                message.Read = true;
+                message.SetAsRead();
             }
 
             PhoneController.Instance.MessageList.Rebuild();

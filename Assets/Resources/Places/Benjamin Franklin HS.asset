@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4225aca6eb54fc4b4399064d56b49d2, type: 3}
+  m_Name: Benjamin Franklin HS
+  m_EditorClassIdentifier: 
+  Name: Benjamin Franklin HS
+  Descritpion: Our old high school. Funny few years of shits, giggles, a lot of parties,
+    and not half that time studying. Those were good times. Well, not for all I guess...
+  Image: {fileID: 21300000, guid: 620c49f5da44d364cb6f9abbe620761a, type: 3}

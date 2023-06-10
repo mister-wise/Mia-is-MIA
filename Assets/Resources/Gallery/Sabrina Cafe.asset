@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d970d6ac07c22047afc76220e330f5c, type: 3}
   m_Name: Sabrina Cafe
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Sabrina Cafe
   Image: {fileID: 21300000, guid: 661a25ceafb76c44da1c17f905a2fe85, type: 3}
   Geolocation: n/a
   Date: n/a

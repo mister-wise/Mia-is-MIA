@@ -60,12 +60,13 @@ namespace Phone
         
         [Header("Call KeyPad")]
         public CallKeyPad CallKeyPad;
-        [SerializeField] private GameObject callKeyPadWindow;
+        [SerializeField]private GameObject callKeyPadWindow;
 
         [Header("Gallery")]
         public GalleryApplication GalleryApplication;
+        
         [SerializeField] private GameObject galleryApplicationWindow;
-
+        
         
         private void Awake()
         {
@@ -99,7 +100,7 @@ namespace Phone
         }
 
         // TODO: Change to real in game time
-        private string GetGameTime() => DateTime.Now.ToString("HH:mm");
+        private string GetGameTime() => GameManager.Instance.GetGameTime().ToString("HH:mm");
         
         public void BackToHome()
         {
@@ -191,6 +192,7 @@ namespace Phone
             BackToHome();
             MessageThread.Rebuild(contact, MessageList.GetContactMessages(contact));
             messageThreadWindow.transform.DOMoveY(0, .5f);
+            MessageThread.ScrollToBottom();
         }
         
         public void CloseMessageTheadWindow()
@@ -238,8 +240,16 @@ namespace Phone
 
         public void ReceiveMessage(Message message)
         {
+            if (IsWindowOpen(messageThreadWindow) && MessageThread.Contact == message.Contact)
+            {
+                message.SetAsRead();
+                PlayNotificationSound();
+            }
+            else
+            {
+                AddNotification(new MessageNotification(message));
+            }
             MessageList.AddMessage(message);
-            AddNotification(new MessageNotification(message));
         }
 
 
@@ -247,15 +257,17 @@ namespace Phone
         {
             var notificationObject = Instantiate(notificationPrefab, notificationContainer);
             notificationObject.GetComponent<NotificationController>()?.SetNotification(notification);
-            audioSource.PlayOneShot(notificationSound);
+            PlayNotificationSound();
         }
+
+
 
         private bool IsWindowOpen(GameObject window)
         {
             return Mathf.Round(window.transform.position.y) == 0;
         }
 
-        private void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count=1)
+        public void AddCallToHistory(ContactSO contact, RecentCallStatus status, int count=1)
         {
             var childCount = recentCallsContainer.transform.childCount;
             if (childCount > 0)
@@ -294,7 +306,7 @@ namespace Phone
             }
 
             yield return new WaitForSeconds(1.5f);
-            if (contact != antagonistContact && contact != miaContact)
+            if (contact != antagonistContact && contact != miaContact && IsWindowOpen(callWindow))
             {
                 Call.FailedCall();
                 yield return new WaitForSeconds(3f);
@@ -312,14 +324,14 @@ namespace Phone
             yield return new WaitForSeconds(1.5f);
             if (message.Contact == antagonistContact || message.Contact == miaContact)
             {
-                
+                StartCoroutine(MessageThread.CheckForResponse(message));
             }
             else
             {
                 messageItem.SetNotDeliveredStatus();
-                MessageThread.ScrollToBottom();
                 Instance.SendWarning(message.Contact);
             }
+            MessageThread.ScrollToBottom();
         }
 
         public void SendWarning(ContactSO contact)
@@ -331,9 +343,14 @@ namespace Phone
                 messageText = "Don't try it. This is the only warning.";
             }
            
-            ReceiveMessage(new Message(antagonistContact, messageText, false, DateTime.Now));
+            ReceiveMessage(new Message(antagonistContact, messageText, false, GameManager.Instance.GetGameTime()));
         }
 
+        private void PlayNotificationSound()
+        {
+            audioSource.PlayOneShot(notificationSound);
+        }
+        
         public void PlayErrorSound()
         {
             audioSource.PlayOneShot(errorSound);

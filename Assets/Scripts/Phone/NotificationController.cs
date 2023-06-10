@@ -22,6 +22,8 @@ namespace Phone
 
         [SerializeField] private Sprite messageIcon;
         [SerializeField] private Sprite missedCallIcon;
+        [SerializeField] private Color missedCallColorIcon;
+        [SerializeField] private float missedCallIconScale;
 
         private Notification notification;
         private Vector3 initPosition;
@@ -51,6 +53,17 @@ namespace Phone
                 NotificationType.MissedCall => missedCallIcon,
                 _ => messageIcon
             };
+            notificationIcon.color = notification.Type switch
+            {
+                NotificationType.MissedCall => missedCallColorIcon,
+                _ => Color.white
+            };
+            var scaleValue = notification.Type switch
+            {
+                NotificationType.MissedCall => missedCallIconScale,
+                _ => 1f
+            };
+            notificationIcon.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
         }
 
         public void Remove()

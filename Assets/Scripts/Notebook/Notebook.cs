@@ -60,6 +60,7 @@ public class Notebook : MonoBehaviour
     [SerializeField] private TMP_Dropdown whoDropdown;
     [SerializeField] private TMP_Dropdown whereDropdown;
     [SerializeField] private TMP_Dropdown whyDropdown;
+    [SerializeField] private TMP_Dropdown withDropdown;
 
     [SerializeField] private PersonSO correctWho;
     [SerializeField] private PlaceSO correctWhere;
@@ -72,36 +73,36 @@ public class Notebook : MonoBehaviour
 
     private void Start()
     {
-        Unlock("Mia");
+        Unlock("Mia", 0);
     }
 
-    public void Unlock(string itemName)
+    public void Unlock(string itemName, int? customCost = null)
     {
         var person = Resources.Load($"People/{itemName}");
         if (person != null)
         {
-            Unlock((PersonSO) person);
+            Unlock((PersonSO) person, customCost);
             return;
         }
 
         var place = Resources.Load($"Places/{itemName}");
         if (place != null)
         {
-            Unlock((PlaceSO) place);
+            Unlock((PlaceSO) place, customCost);
             return;
         }
 
         var clue = Resources.Load($"Clues/{itemName}");
         if (clue != null)
         {
-            Unlock((ClueSO) clue);
+            Unlock((ClueSO) clue, customCost);
             return;
         }
 
         Debug.LogError($"Can't unlock {itemName}. Item not found.");
     }
 
-    public void Unlock(NotebookItemSO item)
+    public void Unlock(NotebookItemSO item, int? customCost = null)
     {
         if (IsUnlock(item)) return;
         GameObject itemObject = null;
@@ -125,6 +126,8 @@ public class Notebook : MonoBehaviour
         }
 
         if (itemObject != null) itemObject.GetComponent<NotebookItem>()?.SetItem(item);
+        
+        GameManager.Instance.IncreaseGameTime(customCost ?? GameManager.EventCost);
 
         CheckForResultSectionAvailable();
     }
@@ -142,7 +145,7 @@ public class Notebook : MonoBehaviour
 
     public void CheckForResultSectionAvailable()
     {
-        if (persons.Count >= 1 && places.Count >= 1 && clues.Count >= 1)
+        if (GameManager.Instance.IsAfterMidnight() || (persons.Count >= 3 && places.Count >= 3 && clues.Count >= 3))
         {
             resultSection.SetActive(true);
         }
@@ -150,20 +153,10 @@ public class Notebook : MonoBehaviour
 
     public void FinalCheck()
     {
-        Debug.Log("Check!");
-        if (whereDropdown.options[whereDropdown.value].text == correctWhere.Name)
-        {
-            Debug.Log("You found Mia! She's safe now!");
-        }
-        
-        if (whoDropdown.options[whoDropdown.value].text == correctWho.Name)
-        {
-            Debug.Log("With your help, the police arrested the kidnapper.");
-        }
-        
-        if (whyDropdown.options[whyDropdown.value].text == correctWhy.Name)
-        {
-            Debug.Log("???");
-        }
+        GameManager.Instance.EndGame(
+            correctWhere: whereDropdown.options[whereDropdown.value].text == correctWhere.Name,
+            correctWho: whoDropdown.options[whoDropdown.value].text == correctWho.Name,
+            correctWhy: whyDropdown.options[whyDropdown.value].text == correctWhy.Name,
+            with: withDropdown.value);
     }
 }
