@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
     {
         isEndGame = true;
         endGame.SetEnding(correctWhere, correctWho, correctWhy, with, outOfTime);
+        SendReport.instance.SetAndSendMessage(correctWhere, correctWho, correctWhy, with, outOfTime);
     }
 
     private static DateTime LerpDateTime(DateTime startDateTime, DateTime endDateTime, double t)
