@@ -3110,6 +3110,69 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fcb7de45d88c21c48bddff3f6ba24b0c, type: 3}
     - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A0Alone
+      value: "You went to the place, but Mia wasn\u2019t there. You didn\u2019t manage
+        to save your sister."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A0Frank
+      value: "You went to the place, but Mia wasn\u2019t there. You didn\u2019t manage
+        to save your sister."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A1Alone
+      value: You went to the graveyard alone. Mia was there, but it was a trap. You
+        looked the kidnapper in the eye as he put a gun to her head and pulled a
+        trigger. Moments later you heard a second gunshot.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A1Frank
+      value: "You went looking for help to Frankie\u2019s apartment. You arrived
+        at the graveyard with him and his shotgun, and found Mia - shaken, but still
+        breathing. You did it, she\u2019s alive."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B0Alone
+      value: You never found out who stood behind the kidnapping.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B0Frank
+      value: You never found out who stood behind the kidnapping.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B1Alone
+      value: It was Finlay. You recognized him clearly, as you slowly bled out on
+        a pavement. He walked free, leaving two corpses behind.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B1Frank
+      value: It was Finlay. You recognized him clearly, but there were only two of
+        you there. You had to save Mia, you no choice, but to leave him to run away
+        free.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A0Police
+      value: "You went to the place, but Mia wasn\u2019t there. You didn\u2019t manage
+        to save your sister."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: A1Police
+      value: "You went looking for help into Philadelphia State Police station. You
+        arrived at the graveyard with a bunch of the officers, and found Mia - shaken,
+        but still breathing. You did it, she\u2019s alive."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B0Police
+      value: "Even as he was being taken away, you didn\u2019t recognize his face.
+        Later, the police sealed the case file. You never really found out who stood
+        behind the kidnapping."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: B1Police
+      value: It was Finlay. You recognized him clearly, but he was outnumbered and
+        outgunned. The officers surrounded him, and he was shortly taken into custody.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957601, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
       propertyPath: outOfTimeText
       value: "You've run out of time.. You didn\u2019t manage to save your sister."
       objectReference: {fileID: 0}
@@ -3120,6 +3183,78 @@ PrefabInstance:
     - target: {fileID: 1519581421710957663, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
       propertyPath: m_Name
       value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421710957663, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581421811968747, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 529
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 813.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1070
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519581423471374237, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1068
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3371f7f194c704a498158edb941c5ce6, type: 3}
